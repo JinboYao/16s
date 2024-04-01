@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # Input files
-R1_INPUT="/home/root1/jinbo/16s/cutadaptProject/raw/CG14_S36_R1_001.fastq.gz"
-R2_INPUT="/home/root1/jinbo/16s/cutadaptProject/raw/CG14_S36_R2_001.fastq.gz"
-BARCODES="/home/root1/jinbo/16s/cutadaptProject/barcodes.fasta"
-PRIMER_FILE="/home/root1/jinbo/16s/cutadaptProject/CG14-primer.tsv"
+R1_INPUT="/gpfssan1/home/biogroup/20240401/data/CG14_S36_R1_001.fastq.gz"
+R2_INPUT="/gpfssan1/home/biogroup/20240401/data/CG14_S36_R2_001.fastq.gz"
+BARCODES="/gpfssan1/home/biogroup/20240401/data/barcodes.fasta"
+PRIMER_FILE="/gpfssan1/home/biogroup/20240401/data/CG14-primer.tsv"
 
 # Output directories
-DEMUX_OUTPUT_DIR="demultiplexing_output"
-TRIMMING_OUTPUT_DIR="trimming_output"
+DEMUX_OUTPUT_DIR="/gpfssan1/home/biogroup/20240401/demultiplexing_output"
+TRIMMING_OUTPUT_DIR="/gpfssan1/home/biogroup/20240401/trimming_output"
 
 # Create output directories if they do not exist
 mkdir -p "$DEMUX_OUTPUT_DIR"
