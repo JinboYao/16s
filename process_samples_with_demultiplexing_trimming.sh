@@ -32,8 +32,8 @@ do
         trimmed_R2="$TRIMMING_OUTPUT_DIR/trimmed.${sample_id}.R2.fastq.gz"
         
         # Execute cutadapt command for Trimming
-        echo "$primerF and $primerR"
-        cutadapt -a "$primerF" -A "$primerR" -o "$trimmed_R1" -p "$trimmed_R2" "$R1" "$R2"
+        echo "$forward_primer and $reverse_primer"
+        cutadapt -a "$forward_primer" -A "$reverse_primer" -o "$trimmed_R1" -p "$trimmed_R2" "$R1" "$R2"
         #cutadapt -a CAGCCGCCGCGGTAA -A GTGCTCCCCCGCCAATTCCT -o ./trimming_output/trimmed_R1.fastq.gz -p ./trimming_output/trimmed_R2.fastq.gz /home/root1/jinbo/16s/cutadaptProject/demultiplexing_output/C1.R1.fastq.gz /home/root1/jinbo/16s/cutadaptProject/demultiplexing_output/C1.R2.fastq.gz
     fi
 done < "$PRIMER_FILE"
